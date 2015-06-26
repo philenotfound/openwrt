@@ -36,13 +36,23 @@
 				};
 
 				partition@50000 {
-					label = "firmware";
-					reg = <0x50000 0x770000>;
+					label = "kernel";
+					reg = <0x50000 0x100000>;
+				};
+
+				partition@150000{
+					label = "rootfs";
+					reg = <0x150000 0x670000>;
 				};
 
 				partition@7c0000 {
-					label = "firmware2";
-					reg = <0x7c0000 0x770000>;
+					label = "kernel2";
+					reg = <0x7c0000 0x100000>;
+				};
+
+				partition@8c0000 {
+					label = "rootfs2";
+					reg = <0x8c0000 0x670000>;
 				};
 
 				partition@f30000 {
